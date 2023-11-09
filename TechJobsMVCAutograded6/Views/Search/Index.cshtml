@@ -12,6 +12,7 @@
                     <input type="radio" name="searchType" id="@column.Key" value="@column.Key" checked="@column.Key == 'all'" />
                     <label for="@column.Key">@column.Value</label>
                 </span>
+                
             }
 
         </p>
@@ -22,6 +23,13 @@
         </p>
 
         <input type="submit" value="Search" />
+           <table class="search-results"> 
+              <tr @foreach(var job in ViewBag.jobs){
+                
+                    <p>ID: @job.Id</p>
+                
+            }</tr>
+            </table>
     </form>
 
     <hr />
